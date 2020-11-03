@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Кутята</title>
+    <link rel="stylesheet" href="css/style.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+  </head>
+  <body class="p-home">
+    <header class="header">
+      <div class="header__bar">
+        <div class="header__bar-top">
+          <div class="container header__bar-top-wrapper">
+            <nav class="menu header__menu">
+              <button
+                class="menu__button"
+                type="button"
+                aria-expanded="false"
+                aria-controls="menu__list"
+              ></button>
+              <ul class="menu__list" id="menu__list">
+                <li class="menu__item">
+                  <a class="menu__link menu__link--active" href="#">Статьи</a>
+                </li>
+                <li class="menu__item">
+                  <a class="menu__link" href="#">Заболевания</a>
+                </li>
+                <li class="menu__item">
+                  <a class="menu__link" href="#">Отзывы о породах</a>
+                </li>
+                <li class="menu__user">
+                  <div class="user">
+                    <a class="user__favorites" href="#">
+                      <svg class="user__favorites-icon">
+                        <use href="img/sprite.svg#heart"></use>
+                      </svg>
+                    </a>
+                    <div class="user__logged user__logged--out">
+                      <a class="user__login" href="/login.html">Вход</a>
+                      и
+                      <a class="user__registration" href="/registration.html">регистрация</a>
+                    </div>
+                  
+                    <div class="user__logged user__logged--in">
+                      <a class="user__profile" href="/profile.html">Личный кабинет</a>
+                    </div>
+                  </div>
+                </li>
+                <li class="menu__post-ad">
+                  <button class="post-ad" type="button">
+                    Подать объявление
+                  </button>
+                </li>
+              </ul>
+            </nav>
+
+            <a class="logo header__bar-top-logo" href="#">
+              <div class="logo__image">Лого</div>
+              <p class="logo__slogan">Онлайн подбор щенков и собак</p>
+            </a>
+      
+            <div class="user header__user">
+              <a class="user__favorites" href="#">
+                <svg class="user__favorites-icon">
+                  <use href="img/sprite.svg#heart"></use>
+                </svg>
+              </a>
+              <div class="user__logged user__logged--out">
+                <a class="user__login" href="/login.html">Вход</a>
+                и
+                <a class="user__registration" href="/registration.html">регистрация</a>
+              </div>
+            
+              <div class="user__logged user__logged--in">
+                <a class="user__profile" href="/profile.html">Личный кабинет</a>
+              </div>
+            </div>
+      
+            <button class="post-ad header__post-ad" type="button">
+              Подать объявление
+            </button>
+          </div>
+        </div>
+    
+        <div class="header__bar-footer">
+          <div class="container">
+            <a class="logo header__logo" href="#">
+              <div class="logo__image">Лого</div>
+              <p class="logo__slogan">Онлайн подбор щенков и собак</p>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </header>
+
+    <main class="p-home__main">
+      <div class="container">
+        <div class="p-home__promo">
+          <h1 class="p-home__promo-title">Объявления о продаже щенков и собак</h1>
+          <h3 class="p-home__promo-slogan">Покупка, продажа, вязка</h3>
+        </div>
+
+        <form class="search" action="/" method="POST">
+          <select class="search__item search__select search__buy-sell" name="buy-sell">
+            <option value="buy" selected>Купить</option>
+            <option value="sell">Продать</option>
+          </select>
+          <input class="search__item search__input" type="search" placeholder="Назвение породы" />
+          <select class="search__item search__select search__location" name="location">
+            <option value="buy" selected>Московская обл.</option>
+            <option value="sell">Амурская обл.</option>
+          </select>
+          <button class="search__item search__button" type="submit">Искать</button>
+        </form>
+
+        <div class="p-home__items">
+          <div class="p-home__content">
+            <div class="slider-faq p-home__slider-faq">
+              <a href="#" class="slider-faq__item">
+                <img class="slider-faq__item-image" src="img/how-select.png" alt="Alt">
+                <h5 class="slider-faq__item-title">Как выбрать собаку?</h5>
+              </a>
+              <a href="#" class="slider-faq__item">
+                <img class="slider-faq__item-image" src="img/dog-breeds.png" alt="Alt">
+                <h5 class="slider-faq__item-title">Все породы собак</h5>
+              </a>
+              <a href="#" class="slider-faq__item">
+                <img class="slider-faq__item-image" src="img/dog-breeder.png" alt="Alt">
+                <h5 class="slider-faq__item-title">Начинающему собаководу</h5>
+              </a>
+              <span class="slider-faq__cap"></span>
+            </div>
+  
+            <div class="p-home__new-ads">
+              <div class="new-ads">
+                <h4 class="new-ads__title">Новые объявления</h4>
+                <div class="new-ads__cards">
+                  <article class="card">
+                    <img class="card__image" src="img/pic-card.jpg" alt="Alt">
+                    <div class="card__info">
+                      <a href="#">
+                        <h6 class="card__title">Французсикй бульдог</h6>
+                      </a>
+                      <span class="card__location">Татарстан/г. Казань</span>
+                      <span class="card__date-placement">2 недели назад</span>
+                      <span class="card__price">4000 ₽</span>
+                    </div>
+                  </article>
+                  <article class="card">
+                    <img class="card__image" src="img/pic-card.jpg" alt="Alt">
+                    <div class="card__info">
+                      <a href="#">
+                        <h6 class="card__title">Французсикй бульдог</h6>
+                      </a>
+                      <span class="card__location">Татарстан/г. Казань</span>
+                      <span class="card__date-placement">2 недели назад</span>
+                      <span class="card__price">4000 ₽</span>
+                    </div>
+                  </article>
+                  <article class="card">
+                    <img class="card__image" src="img/pic-card.jpg" alt="Alt">
+                    <div class="card__info">
+                      <a href="#">
+                        <h6 class="card__title">Французсикй бульдог</h6>
+                      </a>
+                      <span class="card__location">Татарстан/г. Казань</span>
+                      <span class="card__date-placement">2 недели назад</span>
+                      <span class="card__price">4000 ₽</span>
+                    </div>
+                  </article>
+                  <article class="card">
+                    <img class="card__image" src="img/pic-card.jpg" alt="Alt">
+                    <div class="card__info">
+                      <a href="#">
+                        <h6 class="card__title">Французсикй бульдог</h6>
+                      </a>
+                      <span class="card__location">Татарстан/г. Казань</span>
+                      <span class="card__date-placement">2 недели назад</span>
+                      <span class="card__price">4000 ₽</span>
+                    </div>
+                  </article>
+                  <article class="card">
+                    <img class="card__image" src="img/pic-card.jpg" alt="Alt">
+                    <div class="card__info">
+                      <a href="#">
+                        <h6 class="card__title">Французсикй бульдог</h6>
+                      </a>
+                      <span class="card__location">Татарстан/г. Казань</span>
+                      <span class="card__date-placement">2 недели назад</span>
+                      <span class="card__price">4000 ₽</span>
+                    </div>
+                  </article>
+                  <article class="card">
+                    <img class="card__image" src="img/pic-card.jpg" alt="Alt">
+                    <div class="card__info">
+                      <a href="#">
+                        <h6 class="card__title">Французсикй бульдог</h6>
+                      </a>
+                      <span class="card__location">Татарстан/г. Казань</span>
+                      <span class="card__date-placement">2 недели назад</span>
+                      <span class="card__price">4000 ₽</span>
+                    </div>
+                  </article>
+                  <article class="card">
+                    <img class="card__image" src="img/pic-card.jpg" alt="Alt">
+                    <div class="card__info">
+                      <a href="#">
+                        <h6 class="card__title">Французсикй бульдог</h6>
+                      </a>
+                      <span class="card__location">Татарстан/г. Казань</span>
+                      <span class="card__date-placement">2 недели назад</span>
+                      <span class="card__price">4000 ₽</span>
+                    </div>
+                  </article>
+                  <article class="card">
+                    <img class="card__image" src="img/pic-card.jpg" alt="Alt">
+                    <div class="card__info">
+                      <a href="#">
+                        <h6 class="card__title">Французсикй бульдог</h6>
+                      </a>
+                      <span class="card__location">Татарстан/г. Казань</span>
+                      <span class="card__date-placement">2 недели назад</span>
+                      <span class="card__price">4000 ₽</span>
+                    </div>
+                  </article>
+                </div>
+  
+                <div class="new-ads__buttons">
+                  <button class="post-ad new-ads__post-ad" type="button">
+                    Подать объявление
+                  </button>
+    
+                  <button class="button new-ads__button" type="button">
+                    Показать ещё
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-home__asides">
+            <aside class="watched p-home__aside">
+              <h5 class="watched__title">Вы смотрели</h5>
+              <div class="watched__items">
+                <article class="card watched__item">
+                  <img class="card__image watched__item-image" src="img/pic-watched.jpg" alt="Alt">
+                  <div class="card__info watched__item-info">
+                    <a href="#">
+                      <h6 class="card__title">Сибирский хаски</h6>
+                    </a>
+                    <span class="card__location">Татарстан/г. Казань</span>
+                    <span class="card__date-placement">2 недели назад</span>
+                    <span class="card__price">4000 ₽</span>
+                  </div>
+                </article>
+                <article class="card watched__item">
+                  <img class="card__image watched__item-image" src="img/pic-watched.jpg" alt="Alt">
+                  <div class="card__info watched__item-info">
+                    <a href="#">
+                      <h6 class="card__title">Сибирский хаски</h6>
+                    </a>
+                    <span class="card__location">Татарстан/г. Казань</span>
+                    <span class="card__date-placement">2 недели назад</span>
+                    <span class="card__price">4000 ₽</span>
+                  </div>
+                </article>
+                <article class="card watched__item">
+                  <img class="card__image watched__item-image" src="img/pic-watched.jpg" alt="Alt">
+                  <div class="card__info watched__item-info">
+                    <a href="#">
+                      <h6 class="card__title">Сибирский хаски</h6>
+                    </a>
+                    <span class="card__location">Татарстан/г. Казань</span>
+                    <span class="card__date-placement">2 недели назад</span>
+                    <span class="card__price">4000 ₽</span>
+                  </div>
+                </article>
+              </div>
+            </aside>
+  
+            <aside class="services p-home__aside">
+              <h5 class="services__title">Услуги</h5>
+              <div class="services__items">
+                <article class="services__item">
+                  <img class="services__item-image" src="img/services-vip.png" alt="Alt">
+                  <a class="services__link" href="#">
+                    <h6 class="services__item-title">VIP-размещение</h6>
+                  </a>
+                  <p class="services__item-text">Продавайте быстрее</p>
+                </article>
+                <article class="services__item">
+                  <img class="services__item-image" src="img/services-breeders.png" alt="Alt">
+                  <a class="services__link" href="#">
+                    <h6 class="services__item-title">Заводчикам</h6>
+                  </a>
+                  <p class="services__item-text">Персональные страницы</p>
+                </article>
+                <article class="services__item">
+                  <img class="services__item-image" src="img/services-vip.png" alt="Alt">
+                  <a class="services__link" href="#">
+                    <h6 class="services__item-title">Персональные страницы</h6>
+                  </a>
+                  <p class="services__item-text">Зарабатывайте с нами</p>
+                </article>
+              </div>
+            </aside>
+          </div>
+
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <ul class="footer__nav">
+          <li class="footer__nav-item">
+            <a class="footer__nav-link" href="#">Помощь приютам</a>
+          </li>
+          <li class="footer__nav-item">
+            <a class="footer__nav-link" href="#">Партнерская программа</a>
+          </li>
+          <li class="footer__nav-item">
+            <a class="footer__nav-link" href="#">Форум</a>
+          </li>
+          <li class="footer__nav-item">
+            <a class="footer__nav-link" href="#">Цена на щенков</a>
+          </li>
+          <li class="footer__nav-item">
+            <a class="footer__nav-link" href="#">Контакты</a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer__bottom">
+        <div class="container">
+          <p class="footer__copyright">
+            Кутята.рф &copy; 2005-2021 
+            <a class="footer__copyright-link" href="#">Политика конфиденциальности</a>
+          </p>
+        </div>
+      </div>
+    </footer>
+    <script src="js/script.min.js"></script>
+  </body>
+</html>
