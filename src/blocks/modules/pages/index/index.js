@@ -8,6 +8,7 @@ if (menu && window.matchMedia("(max-width: 991px)").matches) {
     menuButton.setAttribute('aria-expanded', !isExpanded);
     menuButton.classList.toggle('menu__button--open');
     menuList.classList.toggle('menu__list--open');
+    document.documentElement.classList.toggle('stop-scrolling');
     document.body.classList.toggle('stop-scrolling');
   });
 }
