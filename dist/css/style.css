@@ -203,6 +203,14 @@ body {
     .menu__user {
       display: none; } }
 
+.menu__post-adv {
+  display: grid;
+  justify-content: center;
+  margin-top: 40px; }
+  @media (min-width: 992px) {
+    .menu__post-adv {
+      display: none; } }
+
 .user {
   display: flex; }
   .user__favorites {
@@ -251,6 +259,22 @@ body {
   transition: background-color 0.3s; }
   .post-adv:hover, .post-adv:active {
     background-color: #ac0c0c; }
+
+.post-adv--plus {
+  position: relative;
+  width: 210px;
+  height: 45px;
+  padding-left: 30px;
+  font-weight: bold; }
+  .post-adv--plus::before {
+    content: url("../img/plus.svg");
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    font-weight: normal; }
 
 .logo {
   display: grid;
@@ -329,6 +353,18 @@ body {
   @media (min-width: 992px) {
     .header__logo {
       justify-self: start; } }
+
+.p-home__post-adv {
+  position: fixed;
+  left: 50%;
+  bottom: 20px;
+  z-index: 9;
+  font-weight: bold;
+  -webkit-animation: slide-top 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+          animation: slide-top 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both; }
+  @media (min-width: 992px) {
+    .p-home__post-adv {
+      display: none; } }
 
 .p-home__promo {
   margin-bottom: 30px;
@@ -552,29 +588,6 @@ body {
     display: grid;
     justify-content: center;
     row-gap: 10px; }
-  .new-ads__post-adv {
-    position: fixed;
-    left: 50%;
-    bottom: 5vh;
-    z-index: 10;
-    width: 210px;
-    height: 45px;
-    padding-left: 30px;
-    font-weight: bold;
-    -webkit-animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-            animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both; }
-    @media (min-width: 992px) {
-      .new-ads__post-adv {
-        display: none; } }
-    .new-ads__post-adv::before {
-      content: url("../img/plus.svg");
-      width: 15px;
-      height: 15px;
-      position: absolute;
-      top: 50%;
-      left: 12px;
-      transform: translateY(-50%);
-      font-weight: normal; }
   .new-ads__button {
     width: 210px;
     height: 55px;
@@ -757,11 +770,11 @@ body {
  */
 @-webkit-keyframes slide-top {
   0% {
-    transform: translate(-50%, 0); }
+    transform: translate(-50%, 30px); }
   100% {
-    transform: translate(-50%, -30px); } }
+    transform: translate(-50%, 0); } }
 @keyframes slide-top {
   0% {
-    transform: translate(-50%, 0); }
+    transform: translate(-50%, 30px); }
   100% {
-    transform: translate(-50%, -30px); } }
+    transform: translate(-50%, 0); } }

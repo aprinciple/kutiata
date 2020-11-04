@@ -103,6 +103,16 @@
       display: none;
     }
   }
+
+  &__post-adv {
+    display: grid;
+    justify-content: center;
+    margin-top: 40px;
+
+    @media (min-width: $lg) {
+      display: none;
+    }
+  }
 }
 
 .user {
@@ -184,6 +194,25 @@
   &:hover,
   &:active {
     background-color: #ac0c0c;
+  }
+}
+
+.post-adv--plus {
+  position: relative;
+  width: 210px;
+  height: 45px;
+  padding-left: 30px;
+  font-weight: bold;
+
+  &::before {
+    content: url('../img/plus.svg');
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    font-weight: normal;
   }
 }
 
@@ -294,6 +323,19 @@
 }
 
 .p-home {
+
+  &__post-adv {
+    position: fixed;
+    left: 50%;
+    bottom: 20px;
+    z-index: 9;
+    font-weight: bold;
+    animation: slide-top 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+
+    @media (min-width: $lg) {
+      display: none;
+    }
+  }
 
   &__main {
   }
@@ -601,33 +643,6 @@
     row-gap: 10px;
   }
 
-  &__post-adv {
-    position: fixed;
-    left: 50%;
-    bottom: 5vh;
-    z-index: 10;
-    width: 210px;
-    height: 45px;
-    padding-left: 30px;
-    font-weight: bold;
-    animation: slide-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-
-    @media (min-width: $lg) {
-      display: none;
-    }
-
-    &::before {
-      content: url('../img/plus.svg');
-      width: 15px;
-      height: 15px;
-      position: absolute;
-      top: 50%;
-      left: 12px;
-      transform: translateY(-50%);
-      font-weight: normal;
-    }
-  }
-
   &__button {
     width: 210px;
     height: 55px;
@@ -873,9 +888,9 @@
  */
  @keyframes slide-top {
   0% {
-    transform: translate(-50%, 0);
+    transform: translate(-50%, 30px);
   }
   100% {
-    transform: translate(-50%, -30px);
+    transform: translate(-50%, 0);
   }
 }
