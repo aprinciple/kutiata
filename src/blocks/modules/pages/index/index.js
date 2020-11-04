@@ -29,7 +29,7 @@ if (user) {
   }
 }
 
-const buttonPostAd = document.querySelector('.new-ads__post-adv');
+const buttonPostAd = document.querySelector('.p-home__post-adv');
 if (buttonPostAd && window.matchMedia("(max-width: 991px)").matches) {
   let lastScrollTop = 0;
 
