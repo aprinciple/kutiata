@@ -27,3 +27,14 @@ if (user) {
     });
   }
 }
+
+const buttonPostAd = document.querySelector('.new-ads__post-adv');
+if (buttonPostAd && window.matchMedia("(max-width: 991px)").matches) {
+  window.addEventListener('scroll', (e) => {
+    if(window.pageYOffset > 1200) {
+      buttonPostAd.style.display = 'none';
+    } else {
+      buttonPostAd.style.display = 'inline-flex';
+    }
+  });
+}
