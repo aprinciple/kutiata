@@ -88,7 +88,7 @@ figure, figcaption {
   padding: 0; }
 
 body {
-  font-family: 'Montserrat', Verdana, Geneva, Tahoma, sans-serif; }
+  font-family: Arial, Verdana, Geneva, Tahoma, sans-serif; }
 
 .container {
   width: 100%;
@@ -737,9 +737,11 @@ body {
     @media (min-width: 992px) {
       .footer__nav-item {
         font-weight: normal; } }
-    @media (min-width: 576px) {
-      .footer__nav-item:not(:last-child) {
-        margin-right: 30px; } }
+    .footer__nav-item:not(:last-child) {
+      margin-right: 11px; }
+      @media (min-width: 576px) {
+        .footer__nav-item:not(:last-child) {
+          margin-right: 30px; } }
   .footer__nav-link {
     color: #108cdb;
     text-decoration: none;

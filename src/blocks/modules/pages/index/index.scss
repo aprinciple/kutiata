@@ -836,6 +836,7 @@
     }
 
     &:not(:last-child) {
+      margin-right: 11px;
 
       @media (min-width: $sm) {
         margin-right: 30px;
