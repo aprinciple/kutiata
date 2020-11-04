@@ -199,14 +199,6 @@ body {
     .menu__user {
       display: none; } }
 
-.menu__post-ad {
-  display: grid;
-  justify-content: center;
-  margin-top: 40px; }
-  @media (min-width: 992px) {
-    .menu__post-ad {
-      display: none; } }
-
 .user {
   display: flex; }
   .user__favorites {
@@ -242,7 +234,7 @@ body {
 .user--logged-out .user__logged--out {
   display: grid; }
 
-.post-ad {
+.post-adv {
   justify-content: center;
   align-items: center;
   height: 40px;
@@ -253,7 +245,7 @@ body {
   line-height: 1.2;
   color: #fff;
   transition: background-color 0.3s; }
-  .post-ad:hover, .post-ad:active {
+  .post-adv:hover, .post-adv:active {
     background-color: #ac0c0c; }
 
 .logo {
@@ -322,10 +314,10 @@ body {
       display: flex;
       margin-right: 20px; } }
 
-.header__post-ad {
+.header__post-adv {
   display: none; }
   @media (min-width: 992px) {
-    .header__post-ad {
+    .header__post-adv {
       display: inline-flex; } }
 
 .header__logo {
@@ -402,7 +394,7 @@ body {
       width: 400px; } }
   @media (min-width: 992px) {
     .search {
-      grid-template-columns: 1fr 4fr 1.5fr 1.5fr;
+      grid-auto-flow: column;
       width: 100%;
       margin-bottom: 55px; } }
   .search__item {
@@ -412,7 +404,8 @@ body {
     border: 2px solid #f5f5f5; }
     @media (min-width: 992px) {
       .search__item {
-        border-radius: 0; } }
+        border-radius: 0;
+        outline: none; } }
   .search__select {
     -moz-appearance: none;
     -webkit-appearance: none;
@@ -426,14 +419,23 @@ body {
       display: none; }
   @media (min-width: 992px) {
     .search__buy-sell {
+      width: 130px;
       border-top-left-radius: 3px;
-      border-bottom-left-radius: 3px; } }
+      border-bottom-left-radius: 3px;
+      border-right: 0; } }
   @media (min-width: 992px) {
     .search__input {
-      border-left: 0;
-      border-right: 0; } }
-  .search__location {
-    border-right: 0; }
+      width: 385px; }
+      .search__input:focus {
+        border-color: #d01111; } }
+  @media (min-width: 1200px) {
+    .search__input {
+      width: 565px; } }
+  @media (min-width: 992px) {
+    .search__location {
+      width: 215px;
+      border-right: 0;
+      border-left: 0; } }
   .search__button {
     background-color: transparent;
     border: 2px solid #d01111;
@@ -444,6 +446,7 @@ body {
     transition: background-color 0.3s, color 0.3s; }
     @media (min-width: 992px) {
       .search__button {
+        width: 200px;
         border-radius: 3px; } }
     .search__button:hover, .search__button:active {
       background-color: #d01111;
@@ -545,18 +548,24 @@ body {
     display: grid;
     justify-content: center;
     row-gap: 10px; }
-  .new-ads__post-ad {
-    position: relative;
+  .new-ads__post-adv {
+    position: fixed;
+    left: 50%;
+    bottom: 5vh;
+    z-index: 10;
     width: 210px;
     height: 45px;
     padding-left: 30px;
-    font-weight: bold; }
+    font-weight: bold;
+    -webkit-animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+            animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both; }
     @media (min-width: 992px) {
-      .new-ads__post-ad {
+      .new-ads__post-adv {
         display: none; } }
-    .new-ads__post-ad::before {
-      content: '+';
-      font-size: 30px;
+    .new-ads__post-adv::before {
+      content: url("../img/plus.svg");
+      width: 15px;
+      height: 15px;
       position: absolute;
       top: 50%;
       left: 12px;
@@ -736,3 +745,19 @@ body {
     transition: color 0.3s; }
     .footer__copyright-link:hover, .footer__copyright-link:active {
       color: #d01111; }
+
+/**
+ * ----------------------------------------
+ * animation slide-top
+ * ----------------------------------------
+ */
+@-webkit-keyframes slide-top {
+  0% {
+    transform: translate(-50%, 0); }
+  100% {
+    transform: translate(-50%, -30px); } }
+@keyframes slide-top {
+  0% {
+    transform: translate(-50%, 0); }
+  100% {
+    transform: translate(-50%, -30px); } }

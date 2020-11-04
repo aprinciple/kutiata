@@ -98,16 +98,6 @@
       display: none;
     }
   }
-
-  &__post-ad {
-    display: grid;
-    justify-content: center;
-    margin-top: 40px;
-
-    @media (min-width: $lg) {
-      display: none;
-    }
-  }
 }
 
 .user {
@@ -174,7 +164,7 @@
   display: grid;
 }
 
-.post-ad {
+.post-adv {
   justify-content: center;
   align-items: center;
   height: 40px;
@@ -281,7 +271,7 @@
     }
   }
 
-  &__post-ad {
+  &__post-adv {
     display: none;
 
     @media (min-width: $lg) {
@@ -391,7 +381,7 @@
   }
 
   @media (min-width: $lg) {
-    grid-template-columns: 1fr 4fr 1.5fr 1.5fr;
+    grid-auto-flow: column;
     width: 100%;
     margin-bottom: 55px;
   }
@@ -404,6 +394,7 @@
 
     @media (min-width: $lg) {
       border-radius: 0;
+      outline: none;
     }
   }
 
@@ -425,21 +416,35 @@
   &__buy-sell {
 
     @media (min-width: $lg) {
+      width: 130px;
       border-top-left-radius: 3px;
       border-bottom-left-radius: 3px;
+      border-right: 0;
     }
   }
 
   &__input {
 
     @media (min-width: $lg) {
-      border-left: 0;
-      border-right: 0;
+      width: 385px;
+
+      &:focus {
+        border-color: $red;
+      }
+    }
+
+    @media (min-width: $xl) {
+      width: 565px;
     }
   }
 
   &__location {
-    border-right: 0;
+
+    @media (min-width: $lg) {
+      width: 215px;
+      border-right: 0;
+      border-left: 0;
+    }
   }
 
   &__button {
@@ -452,6 +457,7 @@
     transition: background-color 0.3s, color 0.3s;
 
     @media (min-width: $lg) {
+      width: 200px;
       border-radius: 3px;
     }
 
@@ -590,20 +596,25 @@
     row-gap: 10px;
   }
 
-  &__post-ad {
-    position: relative;
+  &__post-adv {
+    position: fixed;
+    left: 50%;
+    bottom: 5vh;
+    z-index: 10;
     width: 210px;
     height: 45px;
     padding-left: 30px;
     font-weight: bold;
+    animation: slide-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 
     @media (min-width: $lg) {
       display: none;
     }
 
     &::before {
-      content: '+';
-      font-size: 30px;
+      content: url('../img/plus.svg');
+      width: 15px;
+      height: 15px;
       position: absolute;
       top: 50%;
       left: 12px;
@@ -847,5 +858,19 @@
     &:active {
       color: $red;
     }
+  }
+}
+
+/**
+ * ----------------------------------------
+ * animation slide-top
+ * ----------------------------------------
+ */
+ @keyframes slide-top {
+  0% {
+    transform: translate(-50%, 0);
+  }
+  100% {
+    transform: translate(-50%, -30px);
   }
 }
