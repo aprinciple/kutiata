@@ -101,18 +101,7 @@
       <div class="container">
         @@include('../../common/promo/promo.html')
 
-        <form class="search" action="/" method="POST">
-          <select class="search__item search__select search__buy-sell" name="buy-sell">
-            <option value="buy" selected>Купить</option>
-            <option value="sell">Продать</option>
-          </select>
-          <input class="search__item search__input" type="search" placeholder="Назвение породы" />
-          <select class="search__item search__select search__location" name="location">
-            <option value="buy" selected>Московская обл.</option>
-            <option value="sell">Амурская обл.</option>
-          </select>
-          <button class="search__item search__button" type="submit">Искать</button>
-        </form>
+        @@include('../../common/search/search.html')
 
         <div class="p-home__items">
           <div class="p-home__content">
