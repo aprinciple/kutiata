@@ -2,48 +2,7 @@
   <div class="header__bar">
     <div class="header__bar-top">
       <div class="container header__bar-top-wrapper">
-        <nav class="menu header__menu">
-          <button
-            class="menu__button"
-            type="button"
-            aria-expanded="false"
-            aria-controls="menu__list"
-          ></button>
-          <ul class="menu__list" id="menu__list">
-            <li class="menu__item">
-              <a class="menu__link menu__link--active" href="#">Статьи</a>
-            </li>
-            <li class="menu__item">
-              <a class="menu__link" href="#">Заболевания</a>
-            </li>
-            <li class="menu__item">
-              <a class="menu__link" href="#">Отзывы о породах</a>
-            </li>
-            <li class="menu__user">
-              <div class="user">
-                <a class="user__favorites" href="#">
-                  <svg class="user__favorites-icon">
-                    <use href="img/sprite.svg#heart"></use>
-                  </svg>
-                </a>
-                <div class="user__logged user__logged--out">
-                  <a class="user__login" href="/login.html">Вход</a>
-                  и
-                  <a class="user__registration" href="/registration.html">регистрация</a>
-                </div>
-              
-                <div class="user__logged user__logged--in">
-                  <a class="user__profile" href="/profile.html">Личный кабинет</a>
-                </div>
-              </div>
-            </li>
-            <li class="menu__post-adv">
-              <button class="post-adv post-adv--plus" type="button">
-                Подать объявление
-              </button>
-            </li>
-          </ul>
-        </nav>
+        @@include('../../common/menu/menu.html')
 
         <a class="logo header__bar-top-logo" href="#">
           <div class="logo__image">Лого</div>

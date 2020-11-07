@@ -5,7 +5,7 @@
 // document.documentElement.style.setProperty('--vh', `${vh}px`);
 
 // Common
-// import '../blocks/modules/common/menu/menu';
+import '../blocks/modules/common/menu/menu';
 
 // Pages
 import '../blocks/modules/pages/index/index';
