@@ -12,7 +12,12 @@ figure, figcaption {
 }
 
 body {
+  display: grid;
   font-family: Arial, Verdana, Geneva, Tahoma, sans-serif;
+}
+
+footer {
+  align-self: end;
 }
 
 .container {
