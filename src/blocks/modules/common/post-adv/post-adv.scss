@@ -1,0 +1,36 @@
+.post-adv {
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  padding: 0 20px;
+  border-radius: 3px;
+  background-color: $red;
+  font-size: 14px;
+  line-height: 1.2;
+  color: #fff;
+  transition: background-color 0.3s;
+
+  &:hover,
+  &:active {
+    background-color: #ac0c0c;
+  }
+}
+
+.post-adv--plus {
+  position: relative;
+  width: 210px;
+  height: 45px;
+  padding-left: 30px;
+  font-weight: bold;
+
+  &::before {
+    content: url('../img/plus.svg');
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    font-weight: normal;
+  }
+}

@@ -1,4 +1,5 @@
-@import './user/user.scss';
+@import './user/user';
+@import './post-adv/post-adv';
 
 .header {
 
@@ -49,14 +50,6 @@
     @media (min-width: $lg) {
       display: grid;
       padding: 20px 0;
-    }
-  }
-
-  &__post-adv {
-    display: none;
-
-    @media (min-width: $lg) {
-      display: inline-flex;
     }
   }
 

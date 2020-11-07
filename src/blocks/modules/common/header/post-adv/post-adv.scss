@@ -1,0 +1,10 @@
+.header {
+  
+  &__post-adv {
+    display: none;
+
+    @media (min-width: $lg) {
+      display: inline-flex;
+    }
+  }
+}
