@@ -6,6 +6,7 @@
 
 // Common
 import '../blocks/modules/common/menu/menu';
+import '../blocks/modules/common/user/user';
 
 // Pages
 import '../blocks/modules/pages/index/index';

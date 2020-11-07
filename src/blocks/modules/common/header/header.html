@@ -8,23 +8,8 @@
           <div class="logo__image">Лого</div>
           <p class="logo__slogan">Онлайн подбор щенков и собак</p>
         </a>
-  
-        <div class="user header__user">
-          <a class="user__favorites" href="#">
-            <svg class="user__favorites-icon">
-              <use href="img/sprite.svg#heart"></use>
-            </svg>
-          </a>
-          <div class="user__logged user__logged--out">
-            <a class="user__login" href="/login.html">Вход</a>
-            и
-            <a class="user__registration" href="/registration.html">регистрация</a>
-          </div>
-        
-          <div class="user__logged user__logged--in">
-            <a class="user__profile" href="/profile.html">Личный кабинет</a>
-          </div>
-        </div>
+
+        @@include('./user/user.html')
   
         <button class="post-adv header__post-adv" type="button">
           Подать объявление
