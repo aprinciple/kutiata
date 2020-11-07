@@ -1,0 +1,13 @@
+/**
+ * ----------------------------------------
+ * animation slide-top
+ * ----------------------------------------
+ */
+ @keyframes slide-top {
+  0% {
+    transform: translate(-50%, 30px);
+  }
+  100% {
+    transform: translate(-50%, 0);
+  }
+}
