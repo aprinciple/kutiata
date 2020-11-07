@@ -13,6 +13,7 @@ figure, figcaption {
 
 body {
   display: grid;
+  grid-template-rows: auto 1fr auto;
   font-family: Arial, Verdana, Geneva, Tahoma, sans-serif;
 }
 
