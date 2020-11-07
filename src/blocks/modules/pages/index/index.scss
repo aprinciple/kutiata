@@ -339,36 +339,6 @@
   &__main {
   }
 
-  &__promo {
-    margin-bottom: 30px;
-    text-align: center;
-
-    @media (min-width: $lg) {
-      margin-bottom: 35px;
-    }
-  }
-
-  &__promo-title {
-    margin-bottom: 10px;
-    font-weight: bold;
-    font-size: 24px;
-    line-height: 30px;
-
-    @media (min-width: $lg) {
-      font-size: 36px;
-      line-height: 40px;
-    }
-  }
-
-  &__promo-slogan {
-    font-weight: 500;
-    font-size: 16px;
-
-    @media (min-width: $lg) {
-      font-size: 24px;
-    }
-  }
-
   &__items {
 
     @media (min-width: $lg) {
