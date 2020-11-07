@@ -1,0 +1,79 @@
+.header {
+
+  &__bar {
+    display: grid;
+    margin-bottom: 30px;
+    padding: 20px 0;
+    background-color: #fff;
+    border-bottom: 2px solid $red;
+
+    @media (min-width: $lg) {
+      margin-bottom: 50px;
+      padding: 0;
+    }
+  }
+
+  &__bar-top {
+
+    @media (min-width: $lg) {
+      border-bottom: 1px solid $dark-gray;
+      background-color: $gray;
+    }
+  }
+
+  &__bar-top-wrapper {
+    display: grid;
+    grid-template-columns: auto 1fr;
+
+    @media (min-width: $lg) {
+      display: grid;
+      grid-template-columns: 1fr auto auto;
+      align-items: center;
+      height: 55px;
+    }
+  }
+
+  &__bar-top-logo {
+    justify-self: center;
+
+    @media (min-width: $lg) {
+      display: none;
+    }
+  }
+
+  &__bar-footer {
+    display: none;
+
+    @media (min-width: $lg) {
+      display: grid;
+      padding: 20px 0;
+    }
+  }
+
+  &__menu {}
+
+  &__user {
+    display: none;
+
+    @media (min-width: $lg) {
+      display: flex;
+      margin-right: 20px;
+    }
+  }
+
+  &__post-adv {
+    display: none;
+
+    @media (min-width: $lg) {
+      display: inline-flex;
+    }
+  }
+
+  &__logo {
+    justify-self: center;
+
+    @media (min-width: $lg) {
+      justify-self: start;
+    }
+  }
+}
