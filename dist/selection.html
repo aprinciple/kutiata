@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Кутята</title>
+  <link rel="stylesheet" href="css/style.min.css" />
+</head>
+
+<body class="p-selection">
+  <header class="header">
+    <div class="header__bar">
+      <div class="header__bar-top">
+        <div class="container header__bar-top-wrapper">
+          <nav class="menu header__menu">
+            <button class="menu__button" type="button" aria-expanded="false" aria-controls="menu__list"></button>
+            <ul class="menu__list" id="menu__list">
+              <li class="menu__item">
+                <a class="menu__link menu__link--active" href="#">Статьи</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#">Заболевания</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#">Отзывы о породах</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="/advert.html">Объявление</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="/adverts.html">Объявления</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="/selection.html">Подбор</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="/info.html">Инфо</a>
+              </li>
+              <li class="menu__user">
+                <div class="user">
+                  <a class="user__favorites" href="#">
+                    <svg class="user__favorites-icon">
+                      <use href="img/sprite.svg#heart"></use>
+                    </svg>
+                  </a>
+                  <div class="user__logged user__logged--out">
+                    <a class="user__login" href="/login.html">Вход</a>
+                    и
+                    <a class="user__registration" href="/registration.html">регистрация</a>
+                  </div>
+
+                  <div class="user__logged user__logged--in">
+                    <a class="user__profile" href="/profile.html">Личный кабинет</a>
+                  </div>
+                </div>
+              </li>
+              <li class="menu__post-adv">
+                <button class="post-adv post-adv--plus" type="button">
+                  Подать объявление
+                </button>
+              </li>
+            </ul>
+          </nav>
+
+          <a class="logo header__bar-top-logo" href="/">
+            <div class="logo__image">Лого</div>
+            <p class="logo__slogan">Онлайн подбор щенков и собак</p>
+          </a>
+
+          <div class="user header__user">
+            <a class="user__favorites" href="#">
+              <svg class="user__favorites-icon">
+                <use href="img/sprite.svg#heart"></use>
+              </svg>
+            </a>
+            <div class="user__logged user__logged--out">
+              <a class="user__login" href="/login.html">Вход</a>
+              и
+              <a class="user__registration" href="/registration.html">регистрация</a>
+            </div>
+
+            <div class="user__logged user__logged--in">
+              <a class="user__profile" href="/profile.html">Личный кабинет</a>
+            </div>
+          </div>
+
+          <button class="post-adv header__post-adv" type="button">
+            Подать объявление
+          </button>
+        </div>
+      </div>
+
+      <div class="header__bar-footer">
+        <div class="container">
+          <a class="logo header__logo" href="/">
+            <div class="logo__image">Лого</div>
+            <p class="logo__slogan">Онлайн подбор щенков и собак</p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <div class="p-selection__content">
+        <div class="b-adverts b-selection">
+          <h1 class="b-adverts__title b-selection__title">
+            Подобрать породу по параметрам
+          </h1>
+          <p class="b-selection__subtitle">
+            Выбираете породу? Узнайте как выбрать породу перед покупкой, а также изучите список лучших пород собак и отзывы владельцев!
+            А еще, мы уже подготовили для Вас самые интересные подборки пород. Все породы отсортированы по алфавиту.
+          </p>
+          <form class="filter b-adverts__filter b-selection__filter" action="/" method="POST">
+            <button class="filter__close" type="button" rel="Закрыть"></button>
+            <div class="filter__item b-selection__filter-item">
+              <h6 class="filter__item-title">Тип</h6>
+              <label class="filter__check">
+                Охотничьи
+                <input type="checkbox" class="filter__check-input" name="type_hunting" />
+                <span class="filter__check-box"></span>
+              </label>
+              <label class="filter__check">
+                Компаньоны
+                <input type="checkbox" class="filter__check-input" name="type_companions" />
+                <span class="filter__check-box"></span>
+              </label>
+              <label class="filter__check">
+                Декоративные
+                <input type="checkbox" class="filter__check-input" name="type_decorative" />
+                <span class="filter__check-box"></span>
+              </label>
+              <label class="filter__check">
+                Служебные
+                <input type="checkbox" class="filter__check-input" name="type_service" />
+                <span class="filter__check-box"></span>
+              </label>
+            </div>
+            <div class="filter__item b-selection__filter-item">
+              <h6 class="filter__item-title">Основные черты:</h6>
+              <label class="filter__check">
+                Отсутствует чувство страха
+                <input type="checkbox" class="filter__check-input" name="feature_fear" />
+                <span class="filter__check-box"></span>
+              </label>
+              <label class="filter__check">
+                Мало линяет
+                <input type="checkbox" class="filter__check-input" name="feature_sheds" />
+                <span class="filter__check-box"></span>
+              </label>
+              <label class="filter__check">
+                Отличное здоровье
+                <input type="checkbox" class="filter__check-input" name="feature_health" />
+                <span class="filter__check-box"></span>
+              </label>
+              <label class="filter__check">
+                Хорошее послушание
+                <input type="checkbox" class="filter__check-input" name="feature_obedience" />
+                <span class="filter__check-box"></span>
+              </label>
+              <label class="filter__check">
+                Очень преданная
+                <input type="checkbox" class="filter__check-input" name="feature_devoted" />
+                <span class="filter__check-box"></span>
+              </label>
+              <label class="filter__check">
+                Дружелюбная
+                <input type="checkbox" class="filter__check-input" name="feature_friendly" />
+                <span class="filter__check-box"></span>
+              </label>
+              <label class="filter__check">
+                Подходит для охоты
+                <input type="checkbox" class="filter__check-input" name="feature_hunting" />
+                <span class="filter__check-box"></span>
+              </label>
+              <label class="filter__check">
+                Мало лает
+                <input type="checkbox" class="filter__check-input" name="feature_barks" />
+                <span class="filter__check-box"></span>
+              </label>
+              <label class="filter__check">
+                Проживание вне дома
+                <input type="checkbox" class="filter__check-input" name="feature_away_home" />
+                <span class="filter__check-box"></span>
+              </label>
+              <label class="filter__check">
+                Высокий интеллект
+                <input type="checkbox" class="filter__check-input" name="feature_intelligence" />
+                <span class="filter__check-box"></span>
+              </label>
+              <label class="filter__check">
+                Подходит для охраны
+                <input type="checkbox" class="filter__check-input" name="feature_guard" />
+                <span class="filter__check-box"></span>
+              </label>
+            </div>
+            <div class="filter__item b-selection__filter-item">
+              <h6 class="filter__item-title">Размер:</h6>
+              <label class="filter__check">
+                Любой
+                <input type="checkbox" class="filter__check-input" name="size_any" />
+                <span class="filter__check-box"></span>
+              </label>
+              <label class="filter__check">
+                Мелкая
+                <input type="checkbox" class="filter__check-input" name="size_small" />
+                <span class="filter__check-box"></span>
+              </label>
+              <label class="filter__check">
+                Средняя
+                <input type="checkbox" class="filter__check-input" name="size_middle" />
+                <span class="filter__check-box"></span>
+              </label>
+              <label class="filter__check">
+                Крупная
+                <input type="checkbox" class="filter__check-input" name="size_large" />
+                <span class="filter__check-box"></span>
+              </label>
+              <label class="filter__check">
+                Большая
+                <input type="checkbox" class="filter__check-input" name="size_big" />
+                <span class="filter__check-box"></span>
+              </label>
+            </div>
+            <div class="filter__footer">
+              <button class="button filter__button" type="submit">
+                Показать результат
+              </button>
+            </div>
+          </form>
+          <div class="b-adverts__items b-selection__items">
+            <div class="live-search b-selection__live-search">
+              <form class="search search-advert search-adverts b-selection__search" action="/" method="POST">
+                <input class="search__item search__input search-advert__item search-advert__input search-adverts__input" type="search" placeholder="Назвение породы" />
+                <button class="search-adverts__filter" type="button">
+                  <svg class="search-adverts__filter-icon">
+                    <use href="img/sprite.svg#settings"></use>
+                  </svg>
+                </button>
+              </form>
+              <div class="live-search__results">
+                <div class="live-search__result">
+                  <img class="live-search__result-image" src="img/pic-result.jpg" alt="Alt">
+                  <div class="live-search__result-info">
+                    <h6 class="live-search__result-title">Немецкая овчарка</h6>
+                    <div class="live-search__result-nav">
+                      <a class="live-search__result-link" href="#">Описание</a>
+                      <a class="live-search__result-link" href="#">Видео</a>
+                      <a class="live-search__result-link" href="#">Отзывы</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="live-search__result">
+                  <img class="live-search__result-image" src="img/pic-result.jpg" alt="Alt">
+                  <div class="live-search__result-info">
+                    <h6 class="live-search__result-title">Немецкая овчарка</h6>
+                    <div class="live-search__result-nav">
+                      <a class="live-search__result-link" href="#">Описание</a>
+                      <a class="live-search__result-link" href="#">Видео</a>
+                      <a class="live-search__result-link" href="#">Отзывы</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <article class="card b-selection__item">
+              <img class="card__image b-selection__item-image" src="img/pic-card.jpg" alt="Alt" />
+              <div class="card__info">
+                <a href="#">
+                  <h6 class="card__title">Французсикй бульдог</h6>
+                </a>
+              </div>
+            </article>
+            <article class="card b-selection__item">
+              <img class="card__image b-selection__item-image" src="img/pic-card.jpg" alt="Alt" />
+              <div class="card__info">
+                <a href="#">
+                  <h6 class="card__title">Французсикй бульдог</h6>
+                </a>
+              </div>
+            </article>
+            <article class="card b-selection__item">
+              <img class="card__image b-selection__item-image" src="img/pic-card.jpg" alt="Alt" />
+              <div class="card__info">
+                <a href="#">
+                  <h6 class="card__title">Французсикй бульдог</h6>
+                </a>
+              </div>
+            </article>
+            <article class="card b-selection__item">
+              <img class="card__image b-selection__item-image" src="img/pic-card.jpg" alt="Alt" />
+              <div class="card__info">
+                <a href="#">
+                  <h6 class="card__title">Французсикй бульдог</h6>
+                </a>
+              </div>
+            </article>
+            <article class="card b-selection__item">
+              <img class="card__image b-selection__item-image" src="img/pic-card.jpg" alt="Alt" />
+              <div class="card__info">
+                <a href="#">
+                  <h6 class="card__title">Французсикй бульдог</h6>
+                </a>
+              </div>
+            </article>
+            <article class="card b-selection__item">
+              <img class="card__image b-selection__item-image" src="img/pic-card.jpg" alt="Alt" />
+              <div class="card__info">
+                <a href="#">
+                  <h6 class="card__title">Французсикй бульдог</h6>
+                </a>
+              </div>
+            </article>
+            <article class="card b-selection__item">
+              <img class="card__image b-selection__item-image" src="img/pic-card.jpg" alt="Alt" />
+              <div class="card__info">
+                <a href="#">
+                  <h6 class="card__title">Французсикй бульдог</h6>
+                </a>
+              </div>
+            </article>
+            <article class="card b-selection__item">
+              <img class="card__image b-selection__item-image" src="img/pic-card.jpg" alt="Alt" />
+              <div class="card__info">
+                <a href="#">
+                  <h6 class="card__title">Французсикй бульдог</h6>
+                </a>
+              </div>
+            </article>
+            <article class="card b-selection__item">
+              <img class="card__image b-selection__item-image" src="img/pic-card.jpg" alt="Alt" />
+              <div class="card__info">
+                <a href="#">
+                  <h6 class="card__title">Французсикй бульдог</h6>
+                </a>
+              </div>
+            </article>
+          </div>
+        </div>
+        <article class="p-selection__article">
+          <h2>Как выбрать породу собаки</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, debitis odio. Dolor optio, aspernatur earum voluptatum deleniti aut quibusdam eaque vel blanditiis? Ipsam, sit cum. Voluptatibus quod nam nisi odit.
+          </p>
+          <ul>
+            <li>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur dolorum quos iste quae quo culpa, aperiam repellendus iure commodi impedit magnam labore minus, eos similique ratione? Repellendus obcaecati odio voluptate!
+            </li>
+            <li>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam sequi placeat modi. Doloribus beatae voluptatibus ab aliquid illo id iure unde! Eos facilis quos expedita.
+            </li>
+            <li>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt illo beatae perspiciatis atque at! Tempora natus ipsa distinctio voluptas, totam commodi consectetur impedit, labore, accusamus officia ut nihil qui ipsam?
+            </li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <ul class="footer__nav">
+        <li class="footer__nav-item">
+          <a class="footer__nav-link" href="#">Помощь приютам</a>
+        </li>
+        <li class="footer__nav-item">
+          <a class="footer__nav-link" href="#">Партнерская программа</a>
+        </li>
+        <li class="footer__nav-item">
+          <a class="footer__nav-link" href="#">Форум</a>
+        </li>
+        <li class="footer__nav-item">
+          <a class="footer__nav-link" href="#">Цена на щенков</a>
+        </li>
+        <li class="footer__nav-item">
+          <a class="footer__nav-link" href="#">Контакты</a>
+        </li>
+      </ul>
+    </div>
+    <div class="footer__bottom">
+      <div class="container">
+        <p class="footer__copyright">
+          Кутята.рф &copy; 2005-2021
+          <a class="footer__copyright-link" href="#">Политика конфиденциальности</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+  <script src="js/script.min.js"></script>
+</body>
+
+</html>

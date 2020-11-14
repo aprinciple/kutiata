@@ -182,7 +182,7 @@ function watch() {
   gulp.watch(['src/blocks/**/*.php', 'src/views/**/*.php'], gulp.parallel(phpViews));
   gulp.watch('src/img/svg/*.svg', gulp.parallel(spriteSvg));
   gulp.watch(['src/img/**/*.{jpg,jpeg,png,gif,svg}', 'src/blocks/modules/common/*/*.{jpg,jpeg,png,gif,svg}', 'src/blocks/modules/pages/**/*.{jpg,jpeg,png,gif,svg}'], gulp.parallel(images));
-  gulp.watch('src/img/**/*.{png,jpg,jpeg}', gulp.parallel(webP));
+  // gulp.watch('src/img/**/*.{png,jpg,jpeg}', gulp.parallel(webP));
   gulp.watch('src/fonts/**/*.{woff,woff2}', gulp.parallel(fonts));
 }
 
@@ -195,5 +195,5 @@ function clear() {
 }
 
 exports.build = gulp.series(clean, clear,
-    gulp.parallel([html, style, script, images, webP, spriteSvg, fonts, favicon, gzip]),
+    gulp.parallel([html, style, script, images, spriteSvg, fonts, favicon, gzip]),
     gulp.parallel(server, watch));

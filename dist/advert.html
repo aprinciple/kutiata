@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Кутята</title>
+  <link rel="stylesheet" href="css/style.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css" />
+</head>
+
+<body class="p-advert">
+  <header class="header">
+    <div class="header__bar">
+      <div class="header__bar-top">
+        <div class="container header__bar-top-wrapper">
+          <nav class="menu header__menu">
+            <button class="menu__button" type="button" aria-expanded="false" aria-controls="menu__list"></button>
+            <ul class="menu__list" id="menu__list">
+              <li class="menu__item">
+                <a class="menu__link menu__link--active" href="#">Статьи</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#">Заболевания</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#">Отзывы о породах</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="/advert.html">Объявление</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="/adverts.html">Объявления</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="/selection.html">Подбор</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="/info.html">Инфо</a>
+              </li>
+              <li class="menu__user">
+                <div class="user">
+                  <a class="user__favorites" href="#">
+                    <svg class="user__favorites-icon">
+                      <use href="img/sprite.svg#heart"></use>
+                    </svg>
+                  </a>
+                  <div class="user__logged user__logged--out">
+                    <a class="user__login" href="/login.html">Вход</a>
+                    и
+                    <a class="user__registration" href="/registration.html">регистрация</a>
+                  </div>
+
+                  <div class="user__logged user__logged--in">
+                    <a class="user__profile" href="/profile.html">Личный кабинет</a>
+                  </div>
+                </div>
+              </li>
+              <li class="menu__post-adv">
+                <button class="post-adv post-adv--plus" type="button">
+                  Подать объявление
+                </button>
+              </li>
+            </ul>
+          </nav>
+
+          <a class="logo header__bar-top-logo" href="/">
+            <div class="logo__image">Лого</div>
+            <p class="logo__slogan">Онлайн подбор щенков и собак</p>
+          </a>
+
+          <div class="user header__user">
+            <a class="user__favorites" href="#">
+              <svg class="user__favorites-icon">
+                <use href="img/sprite.svg#heart"></use>
+              </svg>
+            </a>
+            <div class="user__logged user__logged--out">
+              <a class="user__login" href="/login.html">Вход</a>
+              и
+              <a class="user__registration" href="/registration.html">регистрация</a>
+            </div>
+
+            <div class="user__logged user__logged--in">
+              <a class="user__profile" href="/profile.html">Личный кабинет</a>
+            </div>
+          </div>
+
+          <button class="post-adv header__post-adv" type="button">
+            Подать объявление
+          </button>
+        </div>
+      </div>
+
+      <div class="header__bar-footer">
+        <div class="container">
+          <a class="logo header__logo" href="/">
+            <div class="logo__image">Лого</div>
+            <p class="logo__slogan">Онлайн подбор щенков и собак</p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <form class="search search-advert" action="/" method="POST">
+        <select class="search__item search__select search__buy-sell search-advert__item search-advert__by-sell" name="buy-sell">
+          <option value="buy" selected>Купить</option>
+          <option value="sell">Продать</option>
+        </select>
+        <input class="search__item search__input search-advert__item search-advert__input" type="search" placeholder="Назвение породы" />
+        <select class="search__item search__select search__location search-advert__item search-advert__location" name="location">
+          <option value="buy" selected>Московская обл.</option>
+          <option value="sell">Амурская обл.</option>
+        </select>
+        <button class="search__item search__button search-advert__button" type="submit">
+          <svg class="search-advert__button-icon">
+            <use href="img/sprite.svg#search"></use>
+          </svg>
+          Искать
+        </button>
+      </form>
+
+      <div class="breadcrumbs p-advert__breadcrumbs">
+        <a class="breadcrumbs__item" href="#">Объявления</a>
+        <a class="breadcrumbs__item" href="#">Купить</a>
+        <a class="breadcrumbs__item" href="#">г. Москва</a>
+        <span class="breadcrumbs__item">Йорк</span>
+      </div>
+
+      <div class="p-advert__content">
+        <div class="advert">
+          <div class="advert__photos">
+            <button class="advert__photos-nav advert__photos-prev" type="button"></button>
+            <button class="advert__photos-nav advert__photos-next" type="button"></button>
+            <div class="advert__photos-wrapper">
+              <div class="advert__photo">
+                <img src="img/pic-advert.jpg" alt="Alt" />
+              </div>
+              <div class="advert__photo">
+                <img src="img/pic-advert.jpg" alt="Alt" />
+              </div>
+              <div class="advert__photo">
+                <img src="img/pic-advert.jpg" alt="Alt" />
+              </div>
+              <div class="advert__photo">
+                <img src="img/pic-advert.jpg" alt="Alt" />
+              </div>
+              <div class="advert__photo">
+                <img src="img/pic-advert.jpg" alt="Alt" />
+              </div>
+            </div>
+            <ul class="advert__photos-thumbnails">
+              <li class="advert__photos-thumbnails-item">
+                <img src="img/pic-advert.jpg" alt="Alt" />
+              </li>
+              <li class="advert__photos-thumbnails-item">
+                <img src="img/pic-advert.jpg" alt="Alt" />
+              </li>
+              <li class="advert__photos-thumbnails-item">
+                <img src="img/pic-advert.jpg" alt="Alt" />
+              </li>
+              <li class="advert__photos-thumbnails-item">
+                <img src="img/pic-advert.jpg" alt="Alt" />
+              </li>
+              <li class="advert__photos-thumbnails-item">
+                <img src="img/pic-advert.jpg" alt="Alt" />
+              </li>
+            </ul>
+          </div>
+          <h1 class="advert__title">Пес Дэнни ищет родителей</h1>
+          <div class="advert__nav">
+            <a class="advert__nav-item advert__nav-item--prev" href="#">
+              <svg class="advert__nav-icon">
+                <use href="img/sprite.svg#left-arrow"></use>
+              </svg>
+              Назад
+            </a>
+            <a class="advert__nav-item advert__nav-item--next" href="#">
+              <svg class="advert__nav-icon">
+                <use href="img/sprite.svg#right-arrow"></use>
+              </svg>
+              Следующее
+            </a>
+          </div>
+          <span class="advert__price card__price">35 000</span>
+          <div class="advert__buttons static-advert-buttons">
+            <button class="button advert__button advert__button--phone">
+              <svg class="advert__button-icon">
+                <use href="img/sprite.svg#phone"></use>
+              </svg>
+              Показать телефон
+            </button>
+            <button class="button advert__button advert__button--message">
+              <svg class="advert__button-icon">
+                <use href="img/sprite.svg#mail"></use>
+              </svg>
+              Написать сообщение
+            </button>
+          </div>
+          <div class="advert__info">
+            <div class="advert__info-col">
+              <span class="advert__info-item">
+                  Порода:
+                  <b>Французкий бульдог</b>
+                </span>
+              <span class="advert__info-item">
+                  Дата рождения:
+                  <b>1.01. 2020</b>
+                </span>
+              <span class="advert__info-item">
+                  Родословная:
+                  <b>есть</b>
+                </span>
+            </div>
+            <div class="advert__info-col">
+              <span class="advert__info-item">
+                  Кобелей:
+                  <b>1</b>
+                </span>
+              <span class="advert__info-item">
+                  Сук:
+                  <b>2</b>
+                </span>
+            </div>
+          </div>
+          <div class="advert__desc">
+            <p>
+              Малыш Дэнни хочет поскорее найти свою семью. Ориентирован на
+              человека, общительный и конактный пес. Активный,
+              любознательный и полон энергии. 1 годик.
+            </p>
+          </div>
+          <div class="advert__author">
+            <a class="advert__author-name" href="#">Анастасия</a>
+            <span class="advert__author-adv">2 объявления пользователя</span>
+            <button class="button advert__author-favorites" type="button">
+              <svg class="advert__author-favorites-icon">
+                <use href="img/sprite.svg#heart"></use>
+              </svg>
+              Добавить в избранное
+            </button>
+          </div>
+        </div>
+        <div class="similar-ads p-advert__similar-ads">
+          <h6 class="similar-ads__title">Похожие объявления</h6>
+          <div class="similar-ads__items">
+            <article class="card similar-ads__item">
+              <img class="card__image" src="img/pic-card.jpg" alt="Alt">
+              <div class="card__info">
+                <a href="#">
+                  <h6 class="card__title">Французсикй бульдог</h6>
+                </a>
+                <span class="card__location">Татарстан/г. Казань</span>
+                <span class="card__date-placement">2 недели назад</span>
+                <span class="card__price">4000</span>
+              </div>
+            </article>
+            <article class="card similar-ads__item">
+              <img class="card__image" src="img/pic-card.jpg" alt="Alt">
+              <div class="card__info">
+                <a href="#">
+                  <h6 class="card__title">Французсикй бульдог</h6>
+                </a>
+                <span class="card__location">Татарстан/г. Казань</span>
+                <span class="card__date-placement">2 недели назад</span>
+                <span class="card__price">4000</span>
+              </div>
+            </article>
+            <article class="card similar-ads__item">
+              <img class="card__image" src="img/pic-card.jpg" alt="Alt">
+              <div class="card__info">
+                <a href="#">
+                  <h6 class="card__title">Французсикй бульдог</h6>
+                </a>
+                <span class="card__location">Татарстан/г. Казань</span>
+                <span class="card__date-placement">2 недели назад</span>
+                <span class="card__price">4000</span>
+              </div>
+            </article>
+            <article class="card similar-ads__item">
+              <img class="card__image" src="img/pic-card.jpg" alt="Alt">
+              <div class="card__info">
+                <a href="#">
+                  <h6 class="card__title">Французсикй бульдог</h6>
+                </a>
+                <span class="card__location">Татарстан/г. Казань</span>
+                <span class="card__date-placement">2 недели назад</span>
+                <span class="card__price">4000</span>
+              </div>
+            </article>
+            <article class="card similar-ads__item">
+              <img class="card__image" src="img/pic-card.jpg" alt="Alt">
+              <div class="card__info">
+                <a href="#">
+                  <h6 class="card__title">Французсикй бульдог</h6>
+                </a>
+                <span class="card__location">Татарстан/г. Казань</span>
+                <span class="card__date-placement">2 недели назад</span>
+                <span class="card__price">4000</span>
+              </div>
+            </article>
+            <article class="card similar-ads__item">
+              <img class="card__image" src="img/pic-card.jpg" alt="Alt">
+              <div class="card__info">
+                <a href="#">
+                  <h6 class="card__title">Французсикй бульдог</h6>
+                </a>
+                <span class="card__location">Татарстан/г. Казань</span>
+                <span class="card__date-placement">2 недели назад</span>
+                <span class="card__price">4000</span>
+              </div>
+            </article>
+          </div>
+
+          <button class="button new-ads__button similar-ads__button" type="button">
+            Показать ещё
+          </button>
+
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div class="fixed-bar desctop-fixed-bar">
+    <div class="container desctop-fixed-bar__wrapper">
+      <span class="desctop-fixed-bar__title">Пес Дэнни ищет родителей</span>
+      <div class="fixed-bar__buttons desctop-fixed-bar__buttons">
+        <button class="button fixed-bar__button fixed-bar__button--phone">
+          <svg class="fixed-bar__button-icon">
+            <use href="img/sprite.svg#phone"></use>
+          </svg>
+          Показать телефон
+        </button>
+        <button class="button fixed-bar__button fixed-bar__button--message">
+          <svg class="fixed-bar__button-icon">
+            <use href="img/sprite.svg#mail"></use>
+          </svg>
+          Написать сообщение
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <ul class="footer__nav">
+        <li class="footer__nav-item">
+          <a class="footer__nav-link" href="#">Помощь приютам</a>
+        </li>
+        <li class="footer__nav-item">
+          <a class="footer__nav-link" href="#">Партнерская программа</a>
+        </li>
+        <li class="footer__nav-item">
+          <a class="footer__nav-link" href="#">Форум</a>
+        </li>
+        <li class="footer__nav-item">
+          <a class="footer__nav-link" href="#">Цена на щенков</a>
+        </li>
+        <li class="footer__nav-item">
+          <a class="footer__nav-link" href="#">Контакты</a>
+        </li>
+      </ul>
+    </div>
+    <div class="footer__bottom">
+      <div class="container">
+        <p class="footer__copyright">
+          Кутята.рф &copy; 2005-2021
+          <a class="footer__copyright-link" href="#">Политика конфиденциальности</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+  <script src="js/script.min.js"></script>
+</body>
+
+</html>

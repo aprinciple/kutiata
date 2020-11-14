@@ -1,13 +1,9 @@
 // Common
-@import 'modules/common/menu/menu';
-@import 'modules/common/user/user';
-@import 'modules/common/logo/logo';
-@import 'modules/common/post-adv/post-adv';
-@import 'modules/common/header/header';
-@import 'modules/common/promo/promo';
-@import 'modules/common/search/search';
-@import 'modules/common/footer/footer';
+// @import 'modules/common/header/header';
 
 // Pages
 @import 'modules/pages/index/index';
 @import 'modules/pages/advert/advert';
+@import 'modules/pages/adverts/adverts';
+@import 'modules/pages/selection/selection';
+@import 'modules/pages/info/info';

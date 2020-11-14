@@ -12,13 +12,13 @@ figure, figcaption {
 }
 
 body {
-  display: grid;
-  grid-template-rows: auto 1fr auto;
+  display: flex;
+  flex-direction: column;
   font-family: Arial, Verdana, Geneva, Tahoma, sans-serif;
 }
 
 footer {
-  align-self: end;
+  margin-top: auto;
 }
 
 .container {
